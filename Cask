@@ -9,6 +9,7 @@
 (depends-on "evil-numbers")
 (depends-on "grizzl")
 (depends-on "highlight-indentation")
+(depends-on "linum-relative")
 (depends-on "noctilux-theme")
 (depends-on "pallet")
 (depends-on "powerline")

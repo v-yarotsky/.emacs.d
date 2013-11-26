@@ -12,6 +12,12 @@
 (load "05powerline.el")
 (load "06evil.el")
 (load "07coffee-mode.el")
+(load "08web-mode.el")
+(load "09linum-relative.el")
+(load "code.el")
+
+(add-hook 'enh-ruby-mode-hook
+          (lambda () (run-hooks 'vlyrs-code-modes-hook)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
