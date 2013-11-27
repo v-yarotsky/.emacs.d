@@ -12,8 +12,13 @@
 
 ;;Truncate lines
 (add-hook 'vlyrs-code-modes-hook
-          (lambda () (setq truncate-lines t)))
+          (lambda()
+            (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
 
 ;;Clean up whitespace on save
 (add-hook 'vlyrs-code-modes-hook
           (lambda () (add-hook 'before-save-hook 'whitespace-cleanup nil t)))
+
+;;Enable auto indent
+(add-hook 'vlyrs-code-modes-hook
+          (lambda () (electric-indent-mode t)))

@@ -14,6 +14,7 @@
 (depends-on "pallet")
 (depends-on "powerline")
 (depends-on "projectile")
+(depends-on "slim-mode")
 (depends-on "sublime-themes")
 (depends-on "surround")
 (depends-on "web-mode")
