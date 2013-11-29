@@ -21,4 +21,12 @@
 
 ;;Enable auto indent
 (add-hook 'vlyrs-code-modes-hook
-          (lambda () (electric-indent-mode t)))
+          (lambda ()
+            (electric-indent-mode 1)
+            (electric-pairs-mode 1)))
+
+(add-hook 'vlyrs-code-modes-hook
+          (lambda ()
+            (require 'highlight-indentation)
+            (highlight-indentation-current-column-mode)))
+

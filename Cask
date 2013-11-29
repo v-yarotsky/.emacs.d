@@ -4,7 +4,6 @@
 (depends-on "auto-complete")
 (depends-on "coffee-mode")
 (depends-on "dash-at-point")
-(depends-on "enh-ruby-mode")
 (depends-on "evil")
 (depends-on "evil-numbers")
 (depends-on "grizzl")
