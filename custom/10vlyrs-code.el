@@ -30,3 +30,8 @@
             (require 'highlight-indentation)
             (highlight-indentation-current-column-mode)))
 
+
+;;Add lint checker
+(add-hook 'vlyrs-code-modes-hook
+	  (lambda()
+	    (flycheck-mode t)))

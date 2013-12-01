@@ -1,3 +1,6 @@
+;; Customize PATH
+(setq exec-path (append exec-path '("~/.rbenv/shims")))
+
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
 (windmove-default-keybindings)
 
@@ -25,3 +28,8 @@
 
 ;; Show *current* dir in dired
 (require 'dired-x)
+
+;;Minibuffer customizations
+
+;;VIM-style word deletion for minibuffer
+(define-key minibuffer-local-map (kbd "C-w") 'backward-kill-word)

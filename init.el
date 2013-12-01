@@ -16,6 +16,8 @@
 (load "12coffee-mode.el")
 (load "13slim-mode.el")
 (load "14web-mode.el")
+(load "15markdown-mode.el")
+(load "16dash-at-point.el")
 
 (add-hook 'ruby-mode-hook
           (lambda () (run-hooks 'vlyrs-code-modes-hook)))
