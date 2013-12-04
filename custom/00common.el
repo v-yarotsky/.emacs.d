@@ -1,5 +1,6 @@
 ;; Customize PATH
 (setq exec-path (append exec-path '("~/.rbenv/shims")))
+(setq exec-path (append exec-path '("~/bin")))
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
 (windmove-default-keybindings)
@@ -12,7 +13,7 @@
 
 ;; Color scheme
 (require 'sublime-themes)
-(load-theme 'noctilux t)
+;;(load-theme 'noctilux t)
 
 ;; Backup files
 (setq backup-directory-alist

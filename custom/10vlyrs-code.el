@@ -1,37 +1,23 @@
 (setq vlyrs-code-modes-hook nil)
 
-;;Line numbers
-(add-hook 'vlyrs-code-modes-hook
-          (lambda () (linum-mode 1)))
-
-;;Hybrid line numbers
 (add-hook 'vlyrs-code-modes-hook
           (lambda ()
-            (linum-relative-toggle)
-            (linum-relative-toggle)))
+            ;; Line Numbers
+            (linum-mode t)
 
-;;Truncate lines
-(add-hook 'vlyrs-code-modes-hook
-          (lambda()
-            (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
+            ;; Whitespace cleanup
+            (setq whitespace-style '(trailing empty))
+            (setq whitespace-cleanup-mode-only-if-initially-clean nil)
+            (whitespace-cleanup-mode t)
 
-;;Clean up whitespace on save
-(add-hook 'vlyrs-code-modes-hook
-          (lambda () (add-hook 'before-save-hook 'whitespace-cleanup nil t)))
+            ;; Auto-indentation and auto-parens
+            (electric-indent-mode t)
+            (electric-pair-mode t)
 
-;;Enable auto indent
-(add-hook 'vlyrs-code-modes-hook
-          (lambda ()
-            (electric-indent-mode 1)
-            (electric-pairs-mode 1)))
+            ;; Indent level highlight
+            (highlight-indentation-current-column-mode)
 
-(add-hook 'vlyrs-code-modes-hook
-          (lambda ()
-            (require 'highlight-indentation)
-            (highlight-indentation-current-column-mode)))
+            ;; Auto-lint
+            (flycheck-mode t)
+            ))
 
-
-;;Add lint checker
-(add-hook 'vlyrs-code-modes-hook
-	  (lambda()
-	    (flycheck-mode t)))
