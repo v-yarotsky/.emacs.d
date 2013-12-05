@@ -12,8 +12,7 @@
 (tool-bar-mode -1)
 
 ;; Color scheme
-(require 'sublime-themes)
-;;(load-theme 'noctilux t)
+(load-theme 'wombat t)
 
 ;; Backup files
 (setq backup-directory-alist

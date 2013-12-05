@@ -17,4 +17,4 @@
 (setq ruby-electric-newline-before-closing-bracket t)
 
 ;; doc
-(add-hook 'ruby-mode 'yard-mode)
+(add-hook 'ruby-mode-hook 'yard-mode)

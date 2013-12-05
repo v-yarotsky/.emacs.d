@@ -15,8 +15,6 @@
 (depends-on "pallet")
 (depends-on "projectile")
 (depends-on "slim-mode")
-(depends-on "solarized-theme")
-(depends-on "sublime-themes")
 (depends-on "surround")
 (depends-on "web-mode")
 (depends-on "whitespace-cleanup-mode")
